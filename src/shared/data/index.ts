@@ -1,1 +1,1 @@
-export { default as MainBlockData } from './main.data';
+export { default as TypeScriptData } from './ts-data';

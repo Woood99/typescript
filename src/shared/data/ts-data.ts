@@ -1,11 +1,11 @@
 import { IConceptBlock } from '../ui/ConceptBlock';
 
-interface Props {
+export interface ITypeScriptData {
    title: string;
    codeBlocks: IConceptBlock[];
 }
 
-const MainBlockData: Props[] = [
+const TypeScriptData: ITypeScriptData[] = [
    {
       title: 'Типизация',
       codeBlocks: [
@@ -1323,4 +1323,4 @@ type MyNonNullable<T> = T extends null | undefined ? never : T;`,
    // },
 ];
 
-export default MainBlockData;
+export default TypeScriptData;

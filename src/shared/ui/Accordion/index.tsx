@@ -40,14 +40,15 @@ const Accordion = ({ data, multiple = false, defaultValue, classNameItem = '' }:
    return (
       <>
          {data.map((item, index) => {
+            const isActive = isOpenIds.includes(index);
+
             return (
-               <div key={index} className={cn(isOpenIds.includes(index) && '_active', classNameItem)}>
-                  <button className={cn(item.button.className, isOpenIds.includes(index) && '_active')} onClick={() => onClickHandler(index)}>
+               <div key={index} className={cn(isActive && '_active', classNameItem)}>
+                  <button className={cn(item.button.className, isActive && '_active')} onClick={() => onClickHandler(index)}>
                      {item.button.children}
                   </button>
-
-                  <CSSTransition nodeRef={popupRef} in={isOpenIds.includes(index)} classNames="_open-select" timeout={200} unmountOnExit>
-                     <div ref={popupRef}>{item.body}</div>
+                  <CSSTransition nodeRef={popupRef} in={isActive} classNames="_open-select" timeout={200} unmountOnExit>
+                     <div ref={popupRef}>{isActive && item.body}</div>
                   </CSSTransition>
                </div>
             );

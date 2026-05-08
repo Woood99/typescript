@@ -1,1 +1,1 @@
-export { default as MainBlock } from './main-block';
+export { default as TypeScriptWrapper } from './typescript-wrapper';

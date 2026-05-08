@@ -1,0 +1,38 @@
+.button {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+}
+
+.clear {
+   padding: 0;
+   background: none;
+   outline: none;
+}
+
+.primary {
+   background-color: #005bff;
+   color: #fff;
+}
+
+.secondary {
+   background-color: rgb(192, 191, 191);
+   color: #333;
+   border-radius: 12px;
+   padding: 0 32px;
+   height: 40px;
+}
+
+.size-default {
+   border-radius: 12px;
+   padding: 0 32px;
+   height: 40px;
+}
+
+.size-small {
+   border-radius: 8px;
+   padding: 0 24px;
+   height: 32px;
+}
