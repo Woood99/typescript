@@ -1,4 +1,5 @@
-import TypeScriptAccordion from './typescript-accordion';
+import { TypeScriptData } from '../data';
+import AccordionBlocks from '../ui/AccordionBlocks';
 
 const TypeScriptWrapper = () => {
    return (
@@ -9,7 +10,7 @@ const TypeScriptWrapper = () => {
                необходимо (например any).
             </h2>
             <div className="flex flex-col gap-4">
-               <TypeScriptAccordion />
+               <AccordionBlocks data={TypeScriptData} /> 
             </div>
          </section>
       </div>

@@ -1,11 +1,6 @@
-import { IConceptBlock } from '../ui/ConceptBlock';
+import { IAccordionBlocks } from '../ui/AccordionBlocks';
 
-export interface ITypeScriptData {
-   title: string;
-   codeBlocks: IConceptBlock[];
-}
-
-const TypeScriptData: ITypeScriptData[] = [
+const TypeScriptData: IAccordionBlocks[] = [
    {
       title: 'Типизация',
       codeBlocks: [

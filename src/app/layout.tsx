@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
-import '@/styles/globals.css';
 import cn from 'clsx';
 import { SITE_DESCRIPTION, SITE_NAME } from '@/shared/constants';
 import { APP_URL } from '@/shared/config';
+import '@/styles/globals.css';
+import { AppProviders } from '@/shared/providers/AppProviders';
 
 const geistSans = Geist({
    variable: '--font-geist-sans',
@@ -36,7 +37,9 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="ru">
-         <body className={cn(geistSans.variable, geistMono.variable, 'antialiased')}>{children}</body>
+         <body className={cn(geistSans.variable, geistMono.variable, 'antialiased')}>
+            <AppProviders>{children}</AppProviders>
+         </body>
       </html>
    );
 }

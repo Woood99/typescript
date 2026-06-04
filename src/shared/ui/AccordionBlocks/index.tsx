@@ -4,16 +4,21 @@ import { useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import { ConceptBlock } from '@/shared/ui';
-import TypeScriptData from '@/shared/data/ts-data';
-import { cn } from '../lib';
+import { cn } from '@/shared/lib';
+import { IConceptBlock } from '../ConceptBlock';
 
-const TypeScriptAccordion = () => {
+export interface IAccordionBlocks {
+   title: string;
+   codeBlocks: IConceptBlock[];
+}
+
+const AccordionBlocks = ({ data }: { data: IAccordionBlocks[] }) => {
    const [openId, setOpenId] = useState<number | null>(null);
    const popupRef = useRef(null);
 
    return (
       <div className="flex flex-col gap-4">
-         {TypeScriptData.map((item, index) => {
+         {data.map((item, index) => {
             const isActive = openId === index;
 
             return (
@@ -59,4 +64,4 @@ const TypeScriptAccordion = () => {
    );
 };
 
-export default TypeScriptAccordion;
+export default AccordionBlocks;
